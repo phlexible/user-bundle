@@ -1,4 +1,7 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.MainPanel');
+
+Ext.require('Phlexible.users.UsersMainPanel');
+Ext.require('Phlexible.users.GroupsMainPanel');
 
 /**
  * Input params:

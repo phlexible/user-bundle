@@ -1,4 +1,4 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.UserFilterPanel');
 
 Phlexible.users.UserFilterPanel = Ext.extend(Ext.form.FormPanel, {
     title: Phlexible.users.Strings.filter,

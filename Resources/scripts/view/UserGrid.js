@@ -1,4 +1,8 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.UserGrid');
+
+Ext.require('Phlexible.users.model.User');
+Ext.require('Phlexible.users.SuccessorWindow');
+Ext.require('Phlexible.users.UserWindow');
 
 Phlexible.users.UserGrid = Ext.extend(Ext.grid.GridPanel, {
     title: Phlexible.users.Strings.users,

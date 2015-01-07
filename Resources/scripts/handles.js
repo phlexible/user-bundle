@@ -1,3 +1,10 @@
+Ext.require('Phlexible.Handles');
+Ext.require('Phlexible.gui.menuhandle.handle.FunctionHandle');
+Ext.require('Phlexible.gui.menuhandle.handle.WindowHandle');
+Ext.require('Phlexible.gui.menuhandle.handle.XtypeHandle');
+Ext.require('Phlexible.users.OptionsWindow');
+Ext.require('Phlexible.users.MainPanel');
+
 Phlexible.Handles.add('logout', function() {
     return new Phlexible.gui.menuhandle.handle.FunctionHandle({
         text: Phlexible.users.Strings.logout,
@@ -16,7 +23,7 @@ Phlexible.Handles.add('logout', function() {
 });
 
 Phlexible.Handles.add('options', function() {
-    return new Phlexible.gui.menuhandle.handle.XtypeHandle({
+    return new Phlexible.gui.menuhandle.handle.WindowHandle({
         text: Phlexible.users.Strings.options,
         iconCls: 'p-user-preferences-icon',
         component: 'Phlexible.users.OptionsWindow'

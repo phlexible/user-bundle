@@ -1,4 +1,5 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.GroupsRowTemplate');
+Ext.provide('Phlexible.users.GroupsMainPanel');
 
 Phlexible.users.GroupsRowTemplate = new Ext.XTemplate(
     '<div style="padding: 10px;">',

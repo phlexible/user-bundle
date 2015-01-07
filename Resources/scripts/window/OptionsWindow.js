@@ -1,4 +1,5 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.OptionsWindowThemeTemplate');
+Ext.provide('Phlexible.users.OptionsWindow');
 
 Phlexible.users.OptionsWindowThemeTemplate = new Ext.XTemplate(
     '<tpl for=".">',
@@ -53,11 +54,13 @@ Phlexible.users.OptionsWindow = Ext.extend(Ext.Window, {
                 listeners: {
                     save: this.viewOverview,
                     cancel: this.viewOverview,
+                    back: this.viewOverview,
                     scope: this
                 }
             });
             actions['view_' + item.xtype] = function (owner, cardIndex) {
                 owner.layout.setActiveItem(cardIndex);
+                owner.setTitle(owner.layout.activeItem.title);
             }.createDelegate(this, [i + 1], true);
         }
 
@@ -87,6 +90,7 @@ Phlexible.users.OptionsWindow = Ext.extend(Ext.Window, {
 
     viewOverview: function () {
         this.actions['view_overview'](this);
+        this.setTitle(Phlexible.users.Strings.options);
     },
 
     afterRender: function () {

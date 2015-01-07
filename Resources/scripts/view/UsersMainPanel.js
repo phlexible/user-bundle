@@ -1,4 +1,7 @@
-Ext.namespace('Phlexible.users');
+Ext.provide('Phlexible.users.UsersMainPanel');
+
+Ext.require('Phlexible.users.UserFilterPanel');
+Ext.require('Phlexible.users.UserGrid');
 
 /**
  * Input params:
